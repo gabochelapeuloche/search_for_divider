@@ -1,12 +1,13 @@
 // Brute Force
 
-// Nb > 0
+// All Nb 
 
 func div_x (x: Int) -> [Int]{
     var i = x
     var div_x_arr : [Int] = []
-    while i > 0 {
-        if x % i == 0 {
+    while i >= -x {
+        if i == 0 {
+        } else if x % i == 0 {
             div_x_arr.append(i)
         }
         i -= 1
