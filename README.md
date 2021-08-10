@@ -1,2 +1,3 @@
 # search_for_divider
-For now only positive numbers to keep green in the commits calendar... not anymore but as always, green.
+
+On va chercher à programmer des fonctions pour décomposer des entiers de différentes manières, dans ce commit on décompose des entiers selons leur diviseurs (rangés dans un tableau. Pour l'instant deux (.swift) l'un conteant des méthodes brute force plus ou moins élaborées, l'autre destiné à contenir des algorithmes plus réfléchis (dans un objectif de performance qui sera atteint ou pas). Bien à vous.
