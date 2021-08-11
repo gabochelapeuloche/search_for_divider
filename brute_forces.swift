@@ -74,14 +74,52 @@ func div_x_frth (x: Int) -> [Int]{
     return div_x_arr
 }
 
-/*div_x_fst(x: 10000)
+// Migth be better than the fourth
+
+/* Pas suffisement tester pour affirmer qu'il n'y a pas de bug mais flm, si c'est un impair il ne peut pas avoir de diviseur pair à priori (x = 2k+1) donc on peut incrémenter i de deux en observant que les impairs, aussi le premier diviseur d'un impair autre que 1 est trois au moins donc notre borne inf est -x/3 */
+
+func div_x_ffth (x: Int) -> [Int] {
+    
+    var i = -x/2
+    var div_x_arr : [Int] = [-x]
+    
+    if x % 2 == 0 {
+        while i < 0 {
+            if x % i == 0 {
+                div_x_arr.append(i)
+            }
+            i += 1
+        }
+        for e in div_x_arr {
+            div_x_arr.append(-e)
+        }
+    } else {
+        i = -x/3
+        while i < 0 {
+            if x % i == 0 {
+                div_x_arr.append(i)
+            }
+            i += 2
+        }
+        for e in div_x_arr {
+            div_x_arr.append(-e)
+        }
+    }
+    return div_x_arr
+}
+
+
+/*
+div_x_fst(x: 10000)
 div_x_scnd(x: 10000)
 div_x_thrd(x: 10000)
-div_x_frth(x: 10000)*/
+div_x_frth(x: 10000)
+div_x_ffth(x: 10000)
+*/
 
 /* 
- 1: 25/10K ops
- 2: 50/20K ops
- 3: 48/10K ops
- 4: 24/5K/25 ops
- */
+1: 25/10K ops
+2: 50/20K ops
+3: 48/10K ops
+4: 24/5K/25 ops
+*/
